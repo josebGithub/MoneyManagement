@@ -1,0 +1,24 @@
+/* The navigation bar */
+.navbar {
+    background-color: rgb(237, 204, 204);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    padding: 0.6rem
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float:right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover { 
+      color: #adcced;
+  }
+

@@ -1,0 +1,76 @@
+#bankstatementanalysis{
+        margin: 0;
+        padding-top: 0!important;
+}
+
+.container {
+  padding-top: 3rem;
+}
+
+/** Set the properties for the form **/
+form {
+    width: 65%;
+    height: 72%;
+    margin:0 auto; 
+    padding: 1rem;
+    box-sizing: border-box;
+    border: solid rgb(127, 134, 134) 0.8rem
+  }
+
+table {
+    margin: 0 auto;
+  }
+  
+  /* Set the styles for the label */
+  label {
+    font-size:large;
+    font-weight: bold;
+    color : rgb(15, 127, 197) !important;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+ 
+  /* Set the styles for the input type=text*/
+
+  input[type=text], input[type=file], select {
+    font-family :Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: blue;
+    width: 85%;
+    padding:0.5rem;
+    margin:2rem;
+    display: inline-block;
+    box-sizing:border-box;
+    border: solid lightgray 0.2rem;
+    border-radius: 0.5rem;
+  } 
+  
+  /* Set the styles for the focus of the input*/
+  input:focus {
+    background: lightgrey;
+    border-radius: 0.2rem;
+  }
+  
+  .submit {
+    padding-left: 2.1rem;
+  }
+
+  /* Set the position of the analysis-buttons */
+  .analysis-buttons {
+    display: flex;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
+  
+  
+  /* Set the style for error messages written to the DOM */
+  #errormsg {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color : red;
+    font-weight: bold;
+    font-size:0.8rem;
+  }
+
+  
+
+ 
