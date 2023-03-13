@@ -86,7 +86,7 @@ const CreditCardStatementAnalysis = () => {
  
            if (!existCategory)
             {
-                const userInput = prompt('Please enter the category for '+obj.Description +' in this format [store name:category] :')
+                const userInput = prompt('Please enter the category for '+obj.Description +' in this format [category] :')
 
                 setNewCategory(userInput)
                 //const temp = userInput.split(':')
