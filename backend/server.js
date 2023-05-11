@@ -2,15 +2,22 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import routesHandler from "./routes/handler.js";
+import dotenv from 'dotenv';
 
 
+if (process.env.NODE_ENV !== 'development') {
+    dotenv.config();
+  }
+
+//create express server
 const app = express()
 
 
 //app.use(bodyParser.urlencoded({extended:false}));
 //app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://chanFamilyStatements:chan09WZ@cluster0.n0mu27z.mongodb.net/chanFamilyStatements?retryWrites=true&w=majority',{
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -19,9 +26,12 @@ const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Database Connected...'));
 
-
+//middleware
 app.use(cors())
+
+//this allows us to pass json
 app.use(express.json());
+
 app.use(express.urlencoded({extended:true}));  
 app.use('/',routesHandler);
 
